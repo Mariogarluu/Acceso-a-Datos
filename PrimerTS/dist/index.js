@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function greet(name) {
     const greeting = `Hello, ${name}!`;
     const element = document.getElementById("greeting");

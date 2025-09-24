@@ -7,11 +7,9 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "commonjs",
     "target": "ES6",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
+    "module": "ES2015",
+    "types": ["node"],
     // "types": ["node"],
     // and npm install -D @types/node
 
@@ -38,8 +36,7 @@
     "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
+    "moduleDetection": "auto",
     "skipLibCheck": true,
-  },
-  "include": ["src"]
+  }
 }
