@@ -1,4 +1,4 @@
-import { timer } from "../node_modules/rxjs/dist/types/internal/observable/timer";
+import { timer } from 'rxjs';
 
 let input: string = '0';
 let operator: string = '';
