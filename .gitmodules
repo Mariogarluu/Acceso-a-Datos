@@ -1,3 +1,6 @@
 [submodule "Calculadora"]
 	path = Calculadora
 	url = https://github.com/Mariogarluu/Calculadora-TS.git
+[submodule "api-db"]
+	path = api-db
+	url = https://github.com/Mariogarluu/api-db.git
