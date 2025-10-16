@@ -4,3 +4,6 @@
 [submodule "api-db"]
 	path = api-db
 	url = https://github.com/Mariogarluu/api-db.git
+[submodule "Api_Naruto"]
+	path = Api_Naruto
+	url = https://github.com/Mariogarluu/Api_Naruto.git
