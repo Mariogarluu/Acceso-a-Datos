@@ -187,21 +187,21 @@ git push --force-with-lease
 Si tienes commits de "copilot-swe-agent[bot]" en tu rama y quieres cambiarlos a tu autoría **sin modificar los archivos**:
 
 ```bash
-# 1. Asegúrate de estar en la rama correcta
-git checkout copilot/update-contributor-ownership
-
-# 2. Configura tu identidad
+# 1. Configura tu identidad
 git config user.name "Mario García Luque"
 git config user.email "garcialuquemario7@gmail.com"
 
-# 3. Cuenta cuántos commits del bot hay (mira el historial)
+# 2. Cuenta cuántos commits del bot hay (mira el historial)
 git log --oneline
 
-# 4. Si son los últimos 2 commits, usa:
-git rebase -i HEAD~2 -x "git commit --amend --author='Mario García Luque <garcialuquemario7@gmail.com>' --no-edit"
+# 3. Identifica cuántos commits del bot hay desde el último commit tuyo
+# Por ejemplo, si los últimos 4 commits son del bot, usa HEAD~4
+
+# 4. Reescribe los commits del bot (ajusta el número según tu caso)
+git rebase -i HEAD~4 -x "git commit --amend --author='Mario García Luque <garcialuquemario7@gmail.com>' --no-edit"
 
 # 5. Fuerza el push (esto reescribe el historial de la rama)
-git push --force-with-lease origin copilot/update-contributor-ownership
+git push --force-with-lease
 ```
 
 ### ⚠️ Advertencias importantes
