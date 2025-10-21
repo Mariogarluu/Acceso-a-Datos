@@ -119,12 +119,95 @@ Este commit aparecerá con tu nombre y correo como autor.
 
 > **Importante:** La configuración solo afecta a **commits nuevos**. Los commits anteriores mantendrán el autor original.
 
-Si deseas cambiar el autor de commits anteriores (avanzado):
+### 🔧 Cambiar el autor de commits anteriores
+
+Si deseas cambiar el autor de commits que ya existen (por ejemplo, commits hechos por bots o con información incorrecta), aquí están las opciones:
+
+#### Opción 1: Cambiar solo el último commit
+
 ```bash
-# ⚠️ Solo usa esto si sabes lo que haces
-# Cambia el autor del último commit
-git commit --amend --author="Mario García Luque <127546757+Mariogarluu@users.noreply.github.com>"
+# Cambia el autor del último commit manteniendo los archivos tal como están
+git commit --amend --author="Mario García Luque <127546757+Mariogarluu@users.noreply.github.com>" --no-edit
 ```
+
+#### Opción 2: Cambiar múltiples commits en una rama
+
+Si tienes varios commits de un bot o contribuidor que quieres cambiar a tu autoría:
+
+```bash
+# PASO 1: Primero configura tu identidad
+git config user.name "Mario García Luque"
+git config user.email "127546757+Mariogarluu@users.noreply.github.com"
+
+# PASO 2: Reescribe los commits de la rama actual
+# Cambia HEAD~2 por el número de commits que quieres modificar
+# Ejemplo: HEAD~2 para los últimos 2 commits, HEAD~3 para los últimos 3, etc.
+git rebase -i HEAD~2 -x "git commit --amend --author='Mario García Luque <127546757+Mariogarluu@users.noreply.github.com>' --no-edit"
+
+# PASO 3: Fuerza el push de la rama actualizada
+git push --force-with-lease
+```
+
+#### Opción 3: Cambiar todos los commits de un autor específico
+
+Si quieres cambiar TODOS los commits de un autor específico (como un bot) en toda la rama:
+
+```bash
+# ⚠️ ADVERTENCIA: Esto reescribe todo el historial
+# Usa con precaución y asegúrate de tener un backup
+
+git filter-branch --env-filter '
+OLD_EMAIL="198982749+Copilot@users.noreply.github.com"
+CORRECT_NAME="Mario García Luque"
+CORRECT_EMAIL="127546757+Mariogarluu@users.noreply.github.com"
+
+if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_COMMITTER_NAME="$CORRECT_NAME"
+    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+fi
+if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_AUTHOR_NAME="$CORRECT_NAME"
+    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+fi
+' --tag-name-filter cat -- --branches --tags
+
+# Después de verificar que todo está correcto:
+git push --force-with-lease
+```
+
+### 📋 Recomendación para tu caso específico
+
+Si tienes commits de "copilot-swe-agent[bot]" en tu rama y quieres cambiarlos a tu autoría **sin modificar los archivos**:
+
+```bash
+# 1. Asegúrate de estar en la rama correcta
+git checkout copilot/update-contributor-ownership
+
+# 2. Configura tu identidad
+git config user.name "Mario García Luque"
+git config user.email "127546757+Mariogarluu@users.noreply.github.com"
+
+# 3. Cuenta cuántos commits del bot hay (mira el historial)
+git log --oneline
+
+# 4. Si son los últimos 2 commits, usa:
+git rebase -i HEAD~2 -x "git commit --amend --author='Mario García Luque <127546757+Mariogarluu@users.noreply.github.com>' --no-edit"
+
+# 5. Fuerza el push (esto reescribe el historial de la rama)
+git push --force-with-lease origin copilot/update-contributor-ownership
+```
+
+### ⚠️ Advertencias importantes
+
+1. **`git push --force-with-lease`** reescribe el historial. Solo hazlo en ramas donde trabajes solo tú.
+2. **Backup**: Antes de hacer cambios drásticos, crea una rama de respaldo:
+   ```bash
+   git branch backup-branch
+   ```
+3. **Coordinación**: Si otros están trabajando en la misma rama, coordina con ellos antes de reescribir el historial.
+4. **Rama principal protegida**: No uses `--force` en ramas principales como `main` o `master` si tienen protección.
 
 ---
 
