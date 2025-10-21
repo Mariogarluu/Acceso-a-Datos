@@ -1,9 +1,0 @@
-{
-  "recommendations": [
-    "bradlc.vscode-tailwindcss",
-    "ms-vscode.vscode-typescript-next",
-    "esbenp.prettier-vscode",
-    "formulahendry.auto-rename-tag",
-    "ms-vscode.vscode-json"
-  ]
-}
