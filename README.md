@@ -35,8 +35,8 @@ Este repositorio contiene los proyectos y ejercicios desarrollados durante la as
 
 El repositorio está organizado en dos carpetas principales:
 
-- **`/TS`** - Proyectos TypeScript ([Ver README](./TS/README.md))
-- **`/Angular`** - Proyectos Angular ([Ver README](./Angular/README.md))
+- **`/TS`** - Proyectos TypeScript ([Ver README](./TS))
+- **`/Angular`** - Proyectos Angular ([Ver README](./Angular))
 
 ### 🚀 Proyectos TypeScript
 
@@ -55,7 +55,7 @@ Proyecto introductorio a TypeScript:
 
 **Tecnologías:** TypeScript, lite-server
 
-[📖 Ver README](./TS/PrimerTS/README.md)
+[📖 Ver README](./TS/PrimerTS)
 
 </td>
 <td width="50%">
@@ -72,7 +72,7 @@ Proyecto con ejercicios prácticos:
 
 **Tecnologías:** TypeScript
 
-[📖 Ver README](./TS/proy1/README.md)
+[📖 Ver README](./TS/proy1)
 
 </td>
 </tr>
@@ -91,7 +91,7 @@ Calculadora web con doble configuración:
 
 **Tecnologías:** TypeScript, RxJS, Vite, HTML/CSS
 
-[📖 Ver README](./TS/calc/README.md)
+[📖 Ver README](./TS/calc)
 
 </td>
 <td width="50%">
@@ -106,7 +106,7 @@ Versión de ejemplo de la calculadora:
 
 **Tecnologías:** TypeScript, lite-server
 
-[📖 Ver README](./TS/calc_ejemplo/README.md)
+[📖 Ver README](./TS/calc_ejemplo)
 
 </td>
 </tr>
@@ -128,7 +128,7 @@ Proyecto Angular básico:
 
 **Tecnologías:** Angular, TypeScript
 
-[📖 Ver README](./Angular/Proyecto1/README.md)
+[📖 Ver README](./Angular/Proyecto1)
 
 </td>
 </tr>
