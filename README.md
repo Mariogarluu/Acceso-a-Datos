@@ -6,6 +6,7 @@
 ### *Desarrollo de Aplicaciones Multiplataforma*
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
 [![RxJS](https://img.shields.io/badge/RxJS-B7178C?style=for-the-badge&logo=reactivex&logoColor=white)](https://rxjs.dev/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
@@ -31,51 +32,21 @@ Este repositorio contiene los proyectos y ejercicios desarrollados durante la as
 
 ## 📂 Estructura del Repositorio
 
-### 🚀 Proyectos Principales
+### 📁 Organización de Contenido
+
+El repositorio está organizado en dos carpetas principales:
+
+- **`/TS`** - Proyectos TypeScript ([Ver README](./TS))
+- **`/Angular`** - Proyectos Angular ([Ver README](./Angular))
+
+### 🚀 Proyectos TypeScript
 
 <table>
 <tr>
 <td width="50%">
 
-#### 🐉 **Dragon Ball Universe Explorer**
-📁 `/dragon-ball-ux`
-
-Aplicación web moderna para explorar el universo de Dragon Ball:
-- **TypeScript** con arquitectura modular
-- **RxJS** para programación reactiva
-- **Tailwind CSS** para estilos modernos
-- Consumo de API Dragon Ball
-- Sistema de paginación y búsqueda
-- Modales y componentes interactivos
-
-**Tecnologías:** TypeScript, RxJS, Vite, Tailwind CSS
-
-[📖 Ver README completo](./dragon-ball-ux/README.md)
-
-</td>
-<td width="50%">
-
-#### 🔢 **Calculadora TypeScript**
-📁 `/calc`
-
-Calculadora web con doble configuración:
-- Implementación con **TypeScript**
-- Dos variantes: lite-server y Vite
-- Uso de **RxJS** para eventos
-- Depuración con VSCode
-- Sistema de operaciones básicas
-
-**Tecnologías:** TypeScript, RxJS, Vite, HTML/CSS
-
-[📖 Ver README completo](./calc/README.md)
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
 #### 📝 **Primer TypeScript**
-📁 `/PrimerTS`
+📁 `/TS/PrimerTS`
 
 Proyecto introductorio a TypeScript:
 - Conceptos básicos de TypeScript
@@ -85,11 +56,13 @@ Proyecto introductorio a TypeScript:
 
 **Tecnologías:** TypeScript, lite-server
 
+[📖 Ver README](./TS/PrimerTS)
+
 </td>
 <td width="50%">
 
 #### 🧮 **Ejercicios TypeScript**
-📁 `/proy1`
+📁 `/TS/proy1`
 
 Proyecto con ejercicios prácticos:
 - Variables y tipos de datos
@@ -100,14 +73,84 @@ Proyecto con ejercicios prácticos:
 
 **Tecnologías:** TypeScript
 
+[📖 Ver README](./TS/proy1)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+#### 🔢 **Calculadora TypeScript**
+📁 `/TS/calc`
+
+Calculadora web con doble configuración:
+- Implementación con **TypeScript**
+- Dos variantes: lite-server y Vite
+- Uso de **RxJS** para eventos
+- Depuración con VSCode
+- Sistema de operaciones básicas
+
+**Tecnologías:** TypeScript, RxJS, Vite, HTML/CSS
+
+[📖 Ver README](./TS/calc)
+
+</td>
+<td width="50%">
+
+#### 📚 **Calculadora Ejemplo**
+📁 `/TS/calc_ejemplo`
+
+Versión de ejemplo de la calculadora:
+- Implementación educativa
+- Servidor con lite-server
+- Ejercicios guiados
+
+**Tecnologías:** TypeScript, lite-server
+
+[📖 Ver README](./TS/calc_ejemplo)
+
 </td>
 </tr>
 </table>
 
-### 📚 Proyectos de Ejemplo
+### 🅰️ Proyectos Angular
 
-- **`/calc_ejemplo`** - Versión de ejemplo de la calculadora
-- **`/Calculadora`** - Directorio de recursos adicionales
+<table>
+<tr>
+<td width="50%">
+
+#### 📱 **Proyecto1**
+📁 `/Angular/Proyecto1`
+
+Proyecto Angular básico:
+- Generado con Angular CLI
+- Arquitectura de componentes
+- Desarrollo moderno con Angular 19
+
+**Tecnologías:** Angular, TypeScript
+
+[📖 Ver README](./Angular/Proyecto1)
+
+</td>
+</tr>
+</table>
+
+### 🔗 Submódulos (Repositorios Externos)
+
+Este repositorio incluye referencias a proyectos más complejos que se mantienen en repositorios independientes:
+
+#### TypeScript
+- **[Calculadora-TS](https://github.com/Mariogarluu/Calculadora-TS)** 📁 `/TS/Calculadora` - Calculadora avanzada TypeScript
+- **[api-db](https://github.com/Mariogarluu/api-db)** 📁 `/TS/api-db` - API Dragon Ball con TypeScript
+- **[Api_Naruto](https://github.com/Mariogarluu/Api_Naruto)** 📁 `/TS/Api_Naruto` - API Naruto con TypeScript
+
+#### Angular
+- **[About_me Angular](https://github.com/Mariogarluu/Abouut_me_Angular)** 📁 `/Angular/About_me` - Página personal con Angular
+
+> **Nota:** Los submódulos son repositorios independientes. Para clonarlos, usa:
+> ```bash
+> git submodule update --init --recursive
+> ```
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -148,13 +191,16 @@ Cada proyecto tiene sus propias dependencias. Para instalar un proyecto específ
 git clone https://github.com/Mariogarluu/Acceso-a-Datos.git
 cd Acceso-a-Datos
 
-# 2. Navegar al proyecto deseado
-cd dragon-ball-ux  # o calc, proy1, etc.
+# 2. (Opcional) Clonar submódulos
+git submodule update --init --recursive
 
-# 3. Instalar dependencias
+# 3. Navegar al proyecto deseado
+cd TS/PrimerTS  # o TS/calc, TS/proy1, Angular/Proyecto1, etc.
+
+# 4. Instalar dependencias
 npm install
 
-# 4. Ejecutar en modo desarrollo
+# 5. Ejecutar en modo desarrollo
 npm run dev
 # o
 npm start
@@ -178,42 +224,31 @@ La mayoría de proyectos comparten estos scripts:
 
 **Orden sugerido de aprendizaje:**
 
-1. **`/PrimerTS`** - Introducción a TypeScript
-2. **`/proy1`** - Ejercicios de tipos y sintaxis
-3. **`/calc`** - Aplicación práctica con eventos
-4. **`/dragon-ball-ux`** - Proyecto completo con arquitectura avanzada
+1. **`/TS/PrimerTS`** - Introducción a TypeScript
+2. **`/TS/proy1`** - Ejercicios de tipos y sintaxis
+3. **`/TS/calc`** - Aplicación práctica con eventos
+4. **`/TS/Calculadora`** (submódulo) - Calculadora avanzada
+5. **`/Angular/Proyecto1`** - Introducción a Angular
+6. **Submódulos de APIs** - Proyectos completos con arquitectura avanzada
 
-### Dragon Ball Universe Explorer
+### Trabajar con Proyectos TypeScript
 
-El proyecto más completo del repositorio:
+Ejemplo con PrimerTS:
 
 ```bash
-cd dragon-ball-ux
+cd TS/PrimerTS
 npm install
-npm run dev
+npm start
 ```
 
-Características destacadas:
-- 🎨 UI moderna con Tailwind CSS
-- ⚡ Arquitectura modular con TypeScript
-- 🔄 State management centralizado
-- 🌐 Consumo de API externa
-- 📱 Diseño responsive
-- 🔍 Búsqueda y paginación
-
-### Calculadora TypeScript
+### Trabajar con Calculadora
 
 Proyecto educativo con dos configuraciones:
 
 ```bash
-cd calc
+cd TS/calc
 npm install
-
-# Opción 1: Con Vite (moderno)
 npm run dev
-
-# Opción 2: Con lite-server (clásico)
-# Ver README del proyecto para más detalles
 ```
 
 Incluye:
@@ -221,6 +256,21 @@ Incluye:
 - ✅ Manejo de errores
 - ✅ Depuración con VSCode
 - ✅ RxJS para eventos
+
+### Trabajar con Submódulos
+
+Para trabajar con los proyectos avanzados (submódulos):
+
+```bash
+# Inicializar y clonar submódulos
+git submodule update --init --recursive
+
+# Navegar al submódulo deseado
+cd TS/api-db  # o TS/Api_Naruto, TS/Calculadora, Angular/About_me
+
+# Consultar el README del submódulo para instrucciones específicas
+cat README.md
+```
 
 ## 🏗️ Arquitectura y Patrones
 
