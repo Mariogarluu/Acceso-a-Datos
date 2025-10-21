@@ -1,12 +1,12 @@
-[submodule "Calculadora"]
-	path = Calculadora
-	url = https://github.com/Mariogarluu/Calculadora-TS.git
-[submodule "api-db"]
-	path = api-db
-	url = https://github.com/Mariogarluu/api-db.git
-[submodule "Api_Naruto"]
-	path = Api_Naruto
-	url = https://github.com/Mariogarluu/Api_Naruto.git
+[submodule "TS/Calculadora"]
+path = TS/Calculadora
+url = https://github.com/Mariogarluu/Calculadora-TS.git
+[submodule "TS/api-db"]
+path = TS/api-db
+url = https://github.com/Mariogarluu/api-db.git
+[submodule "TS/Api_Naruto"]
+path = TS/Api_Naruto
+url = https://github.com/Mariogarluu/Api_Naruto.git
 [submodule "Angular/About_me"]
-	path = Angular/About_me
-	url = git@github.com:Mariogarluu/Abouut_me_Angular.git
+path = Angular/About_me
+url = git@github.com:Mariogarluu/Abouut_me_Angular.git

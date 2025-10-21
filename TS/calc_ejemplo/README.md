@@ -176,3 +176,7 @@ Este es un proyecto educativo. Sugerencias de mejora:
 ## 📄 Licencia
 
 Proyecto educativo - Uso libre para aprendizaje.
+
+---
+
+[⬅️ Volver a Proyectos TypeScript](../README.md) | [⬅️ Volver al README principal](../../README.md)
