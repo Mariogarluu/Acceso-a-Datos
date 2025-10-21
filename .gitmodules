@@ -7,3 +7,6 @@
 [submodule "Api_Naruto"]
 	path = Api_Naruto
 	url = https://github.com/Mariogarluu/Api_Naruto.git
+[submodule "Angular/About_me"]
+	path = Angular/About_me
+	url = git@github.com:Mariogarluu/Abouut_me_Angular.git
