@@ -24,7 +24,7 @@ cd /ruta/a/tu/Acceso-a-Datos
 git config user.name "Mario García Luque"
 
 # Configura tu correo (debe ser el asociado a tu cuenta de GitHub)
-git config user.email "127546757+Mariogarluu@users.noreply.github.com"
+git config user.email "garcialuquemario7@gmail.com"
 ```
 
 > **💡 Nota:** El correo debe ser el mismo que usas en tu cuenta de GitHub. Puedes usar tu correo personal o el correo de privacidad de GitHub que tiene el formato: `ID+username@users.noreply.github.com`
@@ -38,7 +38,7 @@ Para configurar tu identidad en **todos los repositorios** de tu sistema, usa `-
 git config --global user.name "Mario García Luque"
 
 # Configura tu correo globalmente  
-git config --global user.email "127546757+Mariogarluu@users.noreply.github.com"
+git config --global user.email "garcialuquemario7@gmail.com"
 ```
 
 ---
@@ -92,7 +92,12 @@ Para encontrar tu correo de privacidad:
 2. Busca la sección "Primary email address"
 3. Encontrarás tu correo de privacidad con el formato: `[ID]+[tu-usuario]@users.noreply.github.com`
 
-Para el usuario **Mariogarluu**, el correo sería:
+Para el usuario **Mariogarluu**, el correo personal es:
+```
+garcialuquemario7@gmail.com
+```
+
+O puedes usar el correo de privacidad:
 ```
 127546757+Mariogarluu@users.noreply.github.com
 ```
@@ -127,7 +132,7 @@ Si deseas cambiar el autor de commits que ya existen (por ejemplo, commits hecho
 
 ```bash
 # Cambia el autor del último commit manteniendo los archivos tal como están
-git commit --amend --author="Mario García Luque <127546757+Mariogarluu@users.noreply.github.com>" --no-edit
+git commit --amend --author="Mario García Luque <garcialuquemario7@gmail.com>" --no-edit
 ```
 
 #### Opción 2: Cambiar múltiples commits en una rama
@@ -137,12 +142,12 @@ Si tienes varios commits de un bot o contribuidor que quieres cambiar a tu autor
 ```bash
 # PASO 1: Primero configura tu identidad
 git config user.name "Mario García Luque"
-git config user.email "127546757+Mariogarluu@users.noreply.github.com"
+git config user.email "garcialuquemario7@gmail.com"
 
 # PASO 2: Reescribe los commits de la rama actual
 # Cambia HEAD~2 por el número de commits que quieres modificar
 # Ejemplo: HEAD~2 para los últimos 2 commits, HEAD~3 para los últimos 3, etc.
-git rebase -i HEAD~2 -x "git commit --amend --author='Mario García Luque <127546757+Mariogarluu@users.noreply.github.com>' --no-edit"
+git rebase -i HEAD~2 -x "git commit --amend --author='Mario García Luque <garcialuquemario7@gmail.com>' --no-edit"
 
 # PASO 3: Fuerza el push de la rama actualizada
 git push --force-with-lease
@@ -159,7 +164,7 @@ Si quieres cambiar TODOS los commits de un autor específico (como un bot) en to
 git filter-branch --env-filter '
 OLD_EMAIL="198982749+Copilot@users.noreply.github.com"
 CORRECT_NAME="Mario García Luque"
-CORRECT_EMAIL="127546757+Mariogarluu@users.noreply.github.com"
+CORRECT_EMAIL="garcialuquemario7@gmail.com"
 
 if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
 then
@@ -187,13 +192,13 @@ git checkout copilot/update-contributor-ownership
 
 # 2. Configura tu identidad
 git config user.name "Mario García Luque"
-git config user.email "127546757+Mariogarluu@users.noreply.github.com"
+git config user.email "garcialuquemario7@gmail.com"
 
 # 3. Cuenta cuántos commits del bot hay (mira el historial)
 git log --oneline
 
 # 4. Si son los últimos 2 commits, usa:
-git rebase -i HEAD~2 -x "git commit --amend --author='Mario García Luque <127546757+Mariogarluu@users.noreply.github.com>' --no-edit"
+git rebase -i HEAD~2 -x "git commit --amend --author='Mario García Luque <garcialuquemario7@gmail.com>' --no-edit"
 
 # 5. Fuerza el push (esto reescribe el historial de la rama)
 git push --force-with-lease origin copilot/update-contributor-ownership
@@ -253,7 +258,7 @@ Para tus repositorios personales, es mejor usar la configuración **global**:
 
 ```bash
 git config --global user.name "Mario García Luque"
-git config --global user.email "127546757+Mariogarluu@users.noreply.github.com"
+git config --global user.email "garcialuquemario7@gmail.com"
 ```
 
 De esta forma, todos los commits en todos tus repositorios aparecerán automáticamente con tu nombre, sin necesidad de configurar cada repositorio individualmente.
