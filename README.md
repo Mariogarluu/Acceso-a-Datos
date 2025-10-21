@@ -170,6 +170,12 @@ Este repositorio incluye referencias a proyectos más complejos que se mantienen
 - **VSCode** - Editor con configuración de debug
 - **Git** - Control de versiones
 
+## 🔧 Configuración de Git
+
+> **📘 ¿Tus commits no aparecen con tu nombre?** Consulta la [Guía de Configuración de Git](./CONFIGURACION_GIT.md) para aprender cómo configurar correctamente tu autoría de commits.
+
+---
+
 ## 🚀 Inicio Rápido
 
 ### Prerrequisitos
